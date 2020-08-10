@@ -9,17 +9,20 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GetComponent } from './get/get.component';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
   { path: '', component: FormComponent},
-  { path: 'get', component: GetComponent}
+  { path: 'get', component: GetComponent},
+  { path: 'signup', component: SignupComponent}
   ];
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     NavbarComponent,
-    GetComponent
+    GetComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

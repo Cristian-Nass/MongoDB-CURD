@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Companysmodel } from '../companysmodel';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-get',
@@ -14,10 +16,15 @@ export class GetComponent implements OnInit {
   constructor( private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get(this.url).subscribe(response => {
-    console.log(response);
-    this.getData = response;
-    });
+    this.http.get(this.url)
+      // .pipe(
+      //   map((a: Companysmodel[]) => a.map( res => res.title))
+      // )
+      .subscribe((response: string[]) => {
+        // console.log(response.map(a => a.title));
+        console.log(response);
+        this.getData = response;
+      });
 
   }
 

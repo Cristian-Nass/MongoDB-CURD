@@ -34,19 +34,9 @@ export class FormComponent {
   //   form.reset();
   // }
 
-  onCreatePost(postData: {
-                        city: string;
-                        category: string;
-                        title: string;
-                        description: string;
-                        tel: string;
-                        address: string;
-                        website: string;
-                        image: string;
-                        map: string }
-                        ) {
-                            this.http.post(this.url, postData).subscribe();
-                          }
+  onCreatePost(postData: Companysmodel) {
+    this.http.post(this.url, postData).subscribe();
+  }
 
 
   // ngOnInit() {

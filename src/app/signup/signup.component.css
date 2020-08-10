@@ -1,0 +1,9 @@
+.signup-form {
+top: 10vh;
+width: 60vw;
+left: 20vw;
+position: relative;
+background-color: turquoise;
+padding: 16px;
+border-radius: 6px;
+}
