@@ -1,1 +1,109 @@
-<p>form works!</p>
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+
+<div class="wholeForm">
+  <div class="field">
+    <label class="label">City</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="City input" id="city"
+      required
+      ngModel
+      name="city">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Category</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Category input" id="category"
+      required
+      ngModel
+      name="category">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Title</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Title input" id="title"
+      required
+      ngModel
+      name="title">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Description</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Description input" id="description"
+      required
+      ngModel
+      name="description">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Tel</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Tel input" id="tel"
+      required
+      ngModel
+      name="tel">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Address</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Address input" id="address"
+      required
+      ngModel
+      name="address">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Website</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Website input" id="website"
+      required
+      ngModel
+      name="website">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Image</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Image input" id="image"
+      required
+      ngModel
+      name="image">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">Map</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Map input" id="map"
+      required
+      ngModel
+      name="map">
+    </div>
+  </div>
+
+
+  <div class="field is-grouped">
+    <div class="control">
+    <button class="button is-link" type="submit" click=()>Submit</button>
+     </div>
+  </div>
+</div>
+
+</form>
+<hr>
+  <!-- <div>Title : {{ title }}</div> -->
+
+<!-- <div *ngFor="let item of getData">
+  {{ item.map}}
+
+</div> -->

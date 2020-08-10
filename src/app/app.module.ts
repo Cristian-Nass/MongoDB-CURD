@@ -1,16 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { GetComponent } from './get/get.component';
 
+const appRoutes: Routes = [
+  { path: '', component: FormComponent},
+  { path: 'get', component: GetComponent}
+  ];
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    NavbarComponent,
+    GetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
