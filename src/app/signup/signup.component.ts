@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  private url = 'http://localhost:3000/users';
+  private url = 'http://localhost:3000/users/register';
   newUser: {
+    username: string,
     email: string,
     password: string
   };

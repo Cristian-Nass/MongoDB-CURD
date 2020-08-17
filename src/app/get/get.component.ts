@@ -13,7 +13,7 @@ export class GetComponent implements OnInit {
   getData: any;
 
   private url = 'http://localhost:3000/posts';
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.http.get(this.url)
