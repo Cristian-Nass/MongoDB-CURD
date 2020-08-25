@@ -1,24 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
+
+const user = {
+  email: 'cristian@gmail.com',
+  password: '762931896'
+};
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  private url = 'http://localhost:3000/users/login';
-  constructor(private http: HttpClient) { }
+export class LoginComponent {
+  constructor(private authService: AuthService) {}
 
-  ngOnInit() {
-  }
-
-  onlogin(inputLogin: HTMLInputElement) {
-    console.log(inputLogin);
-    this.http.post(this.url, inputLogin).subscribe((res) => {
-      console.log(res);
-    });
+  onlogin() {
+    this.authService.login(user);
   }
 
 }

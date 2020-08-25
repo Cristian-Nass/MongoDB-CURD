@@ -11,28 +11,11 @@ import { from } from 'rxjs';
 export class FormComponent {
 
   private url = 'http://localhost:3000/posts';
-  // city: string;
-  // category: string;
-  // title: string;
-  // description: string;
-  // tel: string;
-  // address: string;
-  // website: string;
-  // image: string;
-  // map: string;
 
   getData: any;
 
   constructor(private http: HttpClient) { }
 
-  // onCreatePost(form: NgForm) {
-  //   console.log(form.form.value);
-  //   this.title = form.form.value.title;
-  //   this.description = form.form.value.description;
-
-
-  //   form.reset();
-  // }
 
   onCreatePost(postData: Companysmodel) {
     this.http.post(this.url, postData).subscribe();

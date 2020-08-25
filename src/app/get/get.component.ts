@@ -17,11 +17,7 @@ export class GetComponent implements OnInit {
 
   ngOnInit() {
     this.http.get(this.url)
-      // .pipe(
-      //   map((a: Companysmodel[]) => a.map( res => res.title))
-      // )
       .subscribe((response: string[]) => {
-        // console.log(response.map(a => a.title));
         console.log(response);
         this.getData = response;
       });
